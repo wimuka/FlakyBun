@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer base {
+} */
+
+h1:after,
+h2:after {
+  display: block;
+  height: 3px;
+  background-color: #fbcfe8;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+li:hover,
+li:active {
+  background-color: #fbcfe8;
+  color: #374151;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+:div:-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
