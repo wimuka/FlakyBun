@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React from "react"
 
 import blackForest from "../images/product/black-forest.png"
 import roseWedCake from "../images/product/blue-rose-wed-cake.png"

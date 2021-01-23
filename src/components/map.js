@@ -19,10 +19,12 @@ const Map = () => {
 
   return (
     <div>
-      <Img
-        fluid={data.staticMap.childFile.childImageSharp.fluid}
-        alt={`image of the map showing fake store's location`}
-      />
+      {data ? (
+        <Img
+          fluid={data.staticMap.childFile.childImageSharp.fluid}
+          alt={`image of the map showing fake store's location`}
+        />
+      ) : null}
     </div>
   )
 }

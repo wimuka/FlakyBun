@@ -16,7 +16,11 @@ const Body = () => {
       <div className="grid grid-cols-1 text-center xl:mt-20 mt-10 mx-10 2xl:grid-cols-3 :mx-80 2xl:text-xl xl:text-lg text-md">
         <div>
           <div className="text-center">
-            <img src={wedcake} className="lg:w-24 w-20 mx-auto" />
+            <img
+              src={wedcake}
+              className="lg:w-24 w-20 mx-auto"
+              alt="icon for wedding cakes"
+            />
             <h3 className="text-gray-900 font-semibold mt-2">WEDDING CAKES</h3>
             <h4 className="text-gray-800 md:w-1/2 w-2/3 mx-auto mt-2">
               It’s your special day, let us create the perfect accompaniment to
@@ -27,7 +31,11 @@ const Body = () => {
 
         <div className="grid-rows-2 mt-5 2xl:mt-0">
           <div className="text-center">
-            <img src={pastry} className="lg:w-24 w-20 mx-auto" />
+            <img
+              src={pastry}
+              className="lg:w-24 w-20 mx-auto"
+              alt="icon for pastries"
+            />
             <h3 className="text-gray-900 font-semibold mt-2">PASTRIES</h3>
             <h4 className="text-gray-800 md:w-1/2 w-2/3 mx-auto mt-2">
               Pastries for all occasions: baby showers, weddings, birthdays and
@@ -39,7 +47,11 @@ const Body = () => {
 
         <div className="grid-rows-2 mt-5 2xl:mt-0">
           <div className="text-center">
-            <img src={specake} className="md:w-24 w-20 mx-auto" />
+            <img
+              src={specake}
+              className="md:w-24 w-20 mx-auto"
+              alt="icon for desserts"
+            />
             <h3 className="text-gray-900 font-semibold mt-2">
               SPECIALTY DESSERTS
             </h3>
