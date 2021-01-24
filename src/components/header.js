@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import "@fontsource/open-sans"
 
 import logotransparent from "../images/logotransparent.png"
@@ -8,26 +8,17 @@ import cakebg from "../images/cakebg.png"
 const Header = ({ siteTitle }) => {
   const [menuClick, setMenuClick] = useState(false)
 
-  const onBtnClick = () => {
-    setMenuClick(!menuClick)
-  }
-
-  let isMobile = null
-
-  useEffect(() => {
-    if (typeof window !== `undefined`) {
-      isMobile = window.innerWidth < 897
-    }
-  }, [])
-
   return (
     <header>
-      {isMobile ? (
-        <div
-          style={{ backgroundImage: `url(${cakebg})` }}
-          className="bg-cover pb-96 bg-center"
-        >
-          <button onClick={() => onBtnClick()}>
+      <div
+        style={{ backgroundImage: `url(${cakebg})` }}
+        className="bg-cover pb-96 bg-center text-right"
+      >
+        <div className="w-full">
+          <button
+            onClick={() => setMenuClick(!menuClick)}
+            className="lg:hidden visible pt-4 pl-1  mr-4"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -41,87 +32,52 @@ const Header = ({ siteTitle }) => {
               />
             </svg>
           </button>
-          {menuClick ? (
-            <nav className="bg-transparent">
-              <ul className=" md:flex">
-                <li className="p-2 text-gray-200">
-                  <a href="#cake-types-section">STORE</a>
-                </li>
-                <li className="p-2 text-gray-200">
-                  <a href="#gallery-section">MENU</a>
-                </li>
-                <li className="p-2 text-gray-200">
-                  <a href="#contact-us-section">CONTACT</a>
-                </li>
-              </ul>
-            </nav>
-          ) : (
-            <nav className="pr-5"></nav>
-          )}
-          <div className="pt-10 mt-32">
-            <h1
-              className="text-gray-200 text-4xl text-center mx-5"
-              style={{ fontFamily: "open-sans" }}
-            >
-              WELCOME TO THE FLAKY BUN
-            </h1>
-          </div>
-          <div className="w-11/12 mx-auto mt-7 text-center">
-            <p className="text-gray-200 text-xl">
-              The Flaky Bun is an old school bakery that combines nostalgia with
-              contemporary. Using only the freshest ingredients, we create and
-              build tasty pieces of art that satisfy creativity.
-            </p>
-          </div>
         </div>
-      ) : (
-        <div
-          style={{ backgroundImage: `url(${cakebg})`, height: "70rem" }}
-          className="bg-cover bg-center"
+
+        <nav
+          className={
+            "bg-transparent lg:flex lg:justify-between flex-grow" +
+            (menuClick ? " flex" : " hidden")
+          }
         >
-          <div className="flex justify-between">
-            <div className="pl-2">
-              <img
-                src={logotransparent}
-                style={{ width: "9rem" }}
-                alt="flakybun logo"
-              />
-            </div>
-            <div className="w-72">
-              <nav className="pt-5 pr-5">
-                <ul className="flex justify-between">
-                  <li className="p-2 px-5 text-gray-100">
-                    <a href="#cake-types-section">STORE</a>
-                  </li>
-                  <li className="p-2 px-5 text-gray-100 ">
-                    <a href="#gallery-section">MENU</a>
-                  </li>
-                  <li className="p-2 text-gray-100">
-                    <a href="#contact-us-section">CONTACT</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+          <div className="lg:visible lg:ml-1 lg:mt-1 invisible">
+            <img
+              src={logotransparent}
+              style={{ width: "9rem" }}
+              alt="flakybun logo"
+            />
           </div>
-          <div className="text-center">
-            <div className="pt-10 2xl:mx-0 mx-24">
-              <h1
-                className="text-gray-100 text-6xl mt-44"
-                style={{ fontFamily: "open-sans" }}
-              >
-                WELCOME TO THE FLAKY BUN
-              </h1>
-            </div>
-            <div className="mx-auto px-40 mt-7 md:px-0 2xl:w-4/12 md:w-8/12 ">
-              <p className="text-gray-200 text-xl">
-                The Flaky Bun is an old school bakery that combines nostalgia
-                with contemporary. Using only the freshest ingredients, we
-                create and build tasty pieces of art that satisfy creativity.
-              </p>
-            </div>
+          <div className="mr-4 w-full lg:mt-2">
+            <ul className="lg:flex lg:justify-end">
+              <li className="p-2 lg:px-5 text-gray-200 ">
+                <a href="#cake-types-section">STORE</a>
+              </li>
+              <li className="p-2 lg:px-5 text-gray-200">
+                <a href="#gallery-section">MENU</a>
+              </li>
+              <li className="p-2 text-gray-200">
+                <a href="#contact-us-section">CONTACT</a>
+              </li>
+            </ul>
           </div>
+        </nav>
+
+        <div className="pt-10 mt-32">
+          <h1
+            className="text-gray-200 text-4xl text-center mx-5"
+            style={{ fontFamily: "open-sans" }}
+          >
+            WELCOME TO THE FLAKY BUN
+          </h1>
         </div>
-      )}
+        <div className="mx-auto px-10 xl:px-40 mt-7 md:px-0 2xl:w-5/12 md:w-1/2 w-9/12 text-center">
+          <p className="text-gray-200 text-xl">
+            The Flaky Bun is an old school bakery that combines nostalgia with
+            contemporary. Using only the freshest ingredients, we create and
+            build tasty pieces of art that satisfy creativity.
+          </p>
+        </div>
+      </div>
     </header>
   )
 }

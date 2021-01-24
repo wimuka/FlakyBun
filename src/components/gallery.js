@@ -14,7 +14,7 @@ const Gallery = () => {
   return (
     <section id="gallery-section">
       <h2
-        className="text-center mt-24 2xl:mt-48 md:text-4xl text-3xl text-gray-800"
+        className="text-center mt-24 2xl:mt-48 md:text-4xl lg:text-3xl text-2xl text-gray-800"
         style={{ fontFamily: "open-sans" }}
       >
         MENU ITEMS
