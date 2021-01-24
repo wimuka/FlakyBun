@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import "@fontsource/open-sans"
 
 import logotransparent from "../images/logotransparent.png"
@@ -7,11 +7,18 @@ import cakebg from "../images/cakebg.png"
 
 const Header = ({ siteTitle }) => {
   const [menuClick, setMenuClick] = useState(false)
-  const isMobile = window.innerWidth < 897
 
   const onBtnClick = () => {
     setMenuClick(!menuClick)
   }
+
+  let isMobile = null
+
+  useEffect(() => {
+    if (typeof window !== `undefined`) {
+      isMobile = window.innerWidth < 897
+    }
+  }, [])
 
   return (
     <header>
