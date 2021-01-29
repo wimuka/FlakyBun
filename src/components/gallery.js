@@ -6,9 +6,8 @@ import blueWedCake from "../images/product/blue-wed-cake.png"
 import bun2 from "../images/product/bun-2.png"
 import cakeCherry from "../images/product/cake-cherry.png"
 import macarons from "../images/product/macarons-v2.png"
-import singleCroissant from "../images/product/single-croissant.jpg"
+import singleCroissant from "../images/product/single-croissant.png"
 import strawCake from "../images/product/strawberry-cake.png"
-import vanCake from "../images/product/vanilla-cake.jpg"
 
 const Gallery = () => {
   return (
@@ -33,11 +32,6 @@ const Gallery = () => {
           className="2xl:h-52 lg:h-40 h-32 2xl:px-24 px-8"
           src={roseWedCake}
           alt="roseWedCake"
-        />
-        <img
-          className="2xl:h-56 lg:h-40 h-32 2xl:px-8"
-          src={vanCake}
-          alt="vanCake"
         />
 
         <img

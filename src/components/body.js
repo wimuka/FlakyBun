@@ -1,4 +1,4 @@
-import React, { section } from "react"
+import React from "react"
 import wedcake from "../images/wedcake.png"
 import specake from "../images/specake.png"
 import pastry from "../images/pastry.png"
