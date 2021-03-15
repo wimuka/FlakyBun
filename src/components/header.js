@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import "@fontsource/open-sans"
 
 import logotransparent from "../images/logotransparent.png"
-import cakebg from "../images/cakebg.png"
+import cakebg from "../images/cakebg.jpg"
 
 const Header = ({ siteTitle }) => {
   const [menuClick, setMenuClick] = useState(false)
