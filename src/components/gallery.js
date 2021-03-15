@@ -1,13 +1,13 @@
 import React from "react"
 
-import blackForest from "../images/product/black-forest.png"
-import roseWedCake from "../images/product/blue-rose-wed-cake.png"
-import blueWedCake from "../images/product/blue-wed-cake.png"
-import bun2 from "../images/product/bun-2.png"
-import cakeCherry from "../images/product/cake-cherry.png"
-import macarons from "../images/product/macarons-v2.png"
-import singleCroissant from "../images/product/single-croissant.png"
-import strawCake from "../images/product/strawberry-cake.png"
+import blackForest from "../images/product/black-forest.jpg"
+import roseWedCake from "../images/product/blue-rose-wed-cake.jpg"
+import blueWedCake from "../images/product/blue-wed-cake.jpg"
+import bun2 from "../images/product/bun-2.jpg"
+import cakeCherry from "../images/product/cake-cherry.jpg"
+import macarons from "../images/product/macarons-v2.jpg"
+import singleCroissant from "../images/product/single-croissant.jpg"
+import strawCake from "../images/product/strawberry-cake.jpg"
 
 const Gallery = () => {
   return (
